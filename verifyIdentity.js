@@ -22,8 +22,12 @@ const decryptedMessage = decryptWithPublicKey(publickey, packageOfDataToSend.sig
 
 const decryptedMessageHex = decryptedMessage.toString()
 
+console.log(decryptedMessage.toString());
+
+
 
 const hashOfOriginal = hash.update(JSON.stringify(packageOfDataToSend.originalData))
+
 const hashOfOriginalHex = hash.digest("hex")
 
 export { hashOfOriginalHex, decryptedMessageHex }
